@@ -1,0 +1,25 @@
+﻿Build started 4/8/2014 6:37:11 PM.
+     1>Project "C:\Users\Arno\Desktop\FF\VisualStudio\FF\FFMainLoop\FFMainLoop.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\FFMainLoop.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Arno\Documents\Libraries\glew-1.7.0\include" /I"C:\Users\Arno\Documents\Libraries\SDL2-2.0.3\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\..\External\parson.c
+         parson.c
+     1>c:\users\arno\desktop\ff\external\parson.c(128): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(188) : see declaration of 'strncpy'
+     1>c:\users\arno\desktop\ff\external\parson.c(148): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+     1>c:\users\arno\desktop\ff\external\parson.c(412): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : see declaration of 'sscanf'
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Arno\Desktop\FF\VisualStudio\FF\Debug\FFMainLoop.lib" /NOLOGO Debug\parson.obj
+         Debug\MainLoop.obj
+         FFMainLoop.vcxproj -> C:\Users\Arno\Desktop\FF\VisualStudio\FF\Debug\FFMainLoop.lib
+       FinalizeBuildStatus:
+         Deleting file "Debug\FFMainLoop.unsuccessfulbuild".
+         Touching "Debug\FFMainLoop.lastbuildstate".
+     1>Done Building Project "C:\Users\Arno\Desktop\FF\VisualStudio\FF\FFMainLoop\FFMainLoop.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.17
