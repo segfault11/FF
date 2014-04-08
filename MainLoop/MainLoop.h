@@ -53,6 +53,11 @@ void FFMainLoopCreate(const char* configFileName);
 void FFMainLoopRun();
 void FFMainLoopDestroy();
 
+
+void FFMainLoopSetInitFunc(void (*init)(void));
+void FFMainLoopSetUpdateFunc(int (*update)(float));
+void FFMainLoopSetFinalizeFunc(void (*finalize)(void));
+
 void FFMainLoopSetKeyDownFunc(void (*func)(int));
 void FFMainLoopSetKeyUpFunc(void (*func)(int));
 void FFMainLoopSetMouseMoveFunc(void (*func)(int, int, int, int));

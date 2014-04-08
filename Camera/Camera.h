@@ -31,7 +31,7 @@ typedef struct FFCamera* FFCameraPtr;
 /*
 ** Create a camera and stores a reference in cam.
 */ 
-int FFCameraCreate(FFCameraPtr* cam);
+FFCameraPtr FFCameraCreate();
 
 /*
 ** Sets the view of the matrix

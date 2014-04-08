@@ -19,10 +19,6 @@ static SDL_Window* window;
 static SDL_GLContext context;
 static float elapsed;
 
-extern void FFInit();
-extern void FFFinalize();
-extern int FFUpdate(float dt);
-
 /* event stuff */
 static void DefaultKeyDownFunc(int kcode)
 {
@@ -66,6 +62,27 @@ static void (*mouseLeftButtonDownFunc)(int, int) = DefaultMouseLeftButtonDown;
 static void (*mouseRightButtonDownFunc)(int, int) = DefaultMouseRightButtonDown;
 static void (*mouseLeftButtonUpFunc)(int, int) = DefaultMouseLeftButtonUp;
 static void (*mouseRightButtonUpFunc)(int, int) = DefaultMouseRightButtonUp;
+
+/*
+**
+*/
+static void DefaultInitFunc(void)
+{
+}
+
+static int DefaultUpdateFunc(float dt)
+{
+    return 0;
+}
+
+static void DefaultFinalizeFunc()
+{
+
+}
+
+static void (*initFunc)(void) = DefaultInitFunc;
+static int (*updateFunc)(float) = DefaultUpdateFunc;
+static void (*finalizeFunc)(void) = DefaultFinalizeFunc;
 
 /*
 ** sets the global variables according to the config file
@@ -176,6 +193,8 @@ static void HandleEvent(SDL_Event* Event)
 
 void FFMainLoopCreate(const char* configFileName)
 {
+    Uint32 flags;
+
 	if (!ProcessConfigFile(configFileName))
     {
         puts("Warning: parsing the config file failed. Using default configuration.");
@@ -200,7 +219,7 @@ void FFMainLoopCreate(const char* configFileName)
     SDL_GL_SetAttribute(SDL_GL_BUFFER_SIZE, 24);
     
     /* create a new window */
-    Uint32 flags = SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN;
+    flags = SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN;
     
 /*    if (fullscreen)
     {
@@ -262,7 +281,7 @@ void FFMainLoopRun()
 
     Uint32 currTime = SDL_GetTicks();
 
-    FFInit();
+    (*initFunc)();
 
     /* event handling */
     while (!done) 
@@ -282,7 +301,7 @@ void FFMainLoopRun()
             HandleEvent(&event);
         }
         
-        if (FFUpdate(elapsed))
+        if ((*updateFunc)(elapsed))
         {
             done = 1;
         }
@@ -290,7 +309,7 @@ void FFMainLoopRun()
         SDL_GL_SwapWindow(window);
     }
     
-    FFFinalize();
+    (*finalizeFunc)();
 }
 
 void FFMainLoopSetKeyDownFunc(void (*func)(int))
@@ -328,3 +347,17 @@ void FFMainLoopSetMouseRightButtonUpFunc(void (*func)(int, int))
     mouseRightButtonUpFunc = func;
 }
 
+void FFMainLoopSetInitFunc(void (*init)(void))
+{
+    initFunc = init;
+}
+
+void FFMainLoopSetUpdateFunc(int (*update)(float))
+{
+    updateFunc = update;
+}
+
+void FFMainLoopSetFinalizeFunc(void (*finalize)(void))
+{
+    finalizeFunc = finalize;
+}

@@ -46,18 +46,18 @@ static void MakeWorldToCamera(
 	m->m44 = 1.0;
 }
 
-int FFCameraCreate(FFCameraPtr* cam)
+FFCameraPtr FFCameraCreate()
 {
-	*cam = malloc(sizeof(struct FFCamera));
+	FFCameraPtr cam = (FFCameraPtr)malloc(sizeof(struct FFCamera));
 
-	if (!(*cam))
+	if (!(cam))
 	{
-		return 0;
+		return NULL;
 	}
 
-	memset(*cam, 0, sizeof(struct FFCamera));
+	memset(cam, 0, sizeof(struct FFCamera));
 
-	return 1;
+	return cam;
 }
 
 void FFCameraDestroy(FFCameraPtr* cam)

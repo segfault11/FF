@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:ObjRendererTest/ObjRendererTest.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ObjRenderer/ObjRenderer.xcodeproj">
+   </FileRef>
+</Workspace>

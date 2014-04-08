@@ -1,0 +1,262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A80E5FEC18F14DE000F62EED /* Keycodes.h in Headers */ = {isa = PBXBuildFile; fileRef = A80E5FE818F14DE000F62EED /* Keycodes.h */; };
+		A80E5FED18F14DE000F62EED /* MainLoop.c in Sources */ = {isa = PBXBuildFile; fileRef = A80E5FE918F14DE000F62EED /* MainLoop.c */; };
+		A80E5FEE18F14DE000F62EED /* MainLoop.h in Headers */ = {isa = PBXBuildFile; fileRef = A80E5FEA18F14DE000F62EED /* MainLoop.h */; };
+		A80E5FEF18F14DE000F62EED /* Scancodes.h in Headers */ = {isa = PBXBuildFile; fileRef = A80E5FEB18F14DE000F62EED /* Scancodes.h */; };
+		A80E5FF118F14E2300F62EED /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A80E5FF018F14E2300F62EED /* SDL2.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A80E5FE018F14DD500F62EED /* libFFMainLoop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFFMainLoop.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A80E5FE818F14DE000F62EED /* Keycodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keycodes.h; sourceTree = "<group>"; };
+		A80E5FE918F14DE000F62EED /* MainLoop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MainLoop.c; sourceTree = "<group>"; };
+		A80E5FEA18F14DE000F62EED /* MainLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainLoop.h; sourceTree = "<group>"; };
+		A80E5FEB18F14DE000F62EED /* Scancodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scancodes.h; sourceTree = "<group>"; };
+		A80E5FF018F14E2300F62EED /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A80E5FDD18F14DD500F62EED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A80E5FF118F14E2300F62EED /* SDL2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A80E5FD718F14DD500F62EED = {
+			isa = PBXGroup;
+			children = (
+				A80E5FF018F14E2300F62EED /* SDL2.framework */,
+				A80E5FE718F14DE000F62EED /* MainLoop */,
+				A80E5FE118F14DD500F62EED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A80E5FE118F14DD500F62EED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A80E5FE018F14DD500F62EED /* libFFMainLoop.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A80E5FE718F14DE000F62EED /* MainLoop */ = {
+			isa = PBXGroup;
+			children = (
+				A80E5FE818F14DE000F62EED /* Keycodes.h */,
+				A80E5FE918F14DE000F62EED /* MainLoop.c */,
+				A80E5FEA18F14DE000F62EED /* MainLoop.h */,
+				A80E5FEB18F14DE000F62EED /* Scancodes.h */,
+			);
+			name = MainLoop;
+			path = ../../MainLoop;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A80E5FDE18F14DD500F62EED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A80E5FEC18F14DE000F62EED /* Keycodes.h in Headers */,
+				A80E5FEF18F14DE000F62EED /* Scancodes.h in Headers */,
+				A80E5FEE18F14DE000F62EED /* MainLoop.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A80E5FDF18F14DD500F62EED /* FFMainLoop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80E5FE418F14DD500F62EED /* Build configuration list for PBXNativeTarget "FFMainLoop" */;
+			buildPhases = (
+				A80E5FDC18F14DD500F62EED /* Sources */,
+				A80E5FDD18F14DD500F62EED /* Frameworks */,
+				A80E5FDE18F14DD500F62EED /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FFMainLoop;
+			productName = FFMainLoop;
+			productReference = A80E5FE018F14DD500F62EED /* libFFMainLoop.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A80E5FD818F14DD500F62EED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Arno in Wolde Luebke";
+			};
+			buildConfigurationList = A80E5FDB18F14DD500F62EED /* Build configuration list for PBXProject "FFMainLoop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A80E5FD718F14DD500F62EED;
+			productRefGroup = A80E5FE118F14DD500F62EED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A80E5FDF18F14DD500F62EED /* FFMainLoop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A80E5FDC18F14DD500F62EED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A80E5FED18F14DE000F62EED /* MainLoop.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A80E5FE218F14DD500F62EED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A80E5FE318F14DD500F62EED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A80E5FE518F14DD500F62EED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_MODULES = NO;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/scttrbrn/Documents/Libraries/GLEW/include/**";
+			};
+			name = Debug;
+		};
+		A80E5FE618F14DD500F62EED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_MODULES = NO;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/scttrbrn/Documents/Libraries/GLEW/include/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A80E5FDB18F14DD500F62EED /* Build configuration list for PBXProject "FFMainLoop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80E5FE218F14DD500F62EED /* Debug */,
+				A80E5FE318F14DD500F62EED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80E5FE418F14DD500F62EED /* Build configuration list for PBXNativeTarget "FFMainLoop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80E5FE518F14DD500F62EED /* Debug */,
+				A80E5FE618F14DD500F62EED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A80E5FD818F14DD500F62EED /* Project object */;
+}
